@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.slider input[type="radio"] {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url(bac.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.7s ease;
+}
+
+.slider.minSlider .slide {
+    width: 100%;
+    background-position-x: center !important;
+    transition: 3s ease-in-out;
+}
+
+.slider input[type="radio"].radio1:checked~.slide {
+    background-position-x: 0;
+}
+
+.slider input[type="radio"].radio2:checked~.slide {
+    background-position-x: -800px;
+}
+
+.slider input[type="radio"].radio3:checked~.slide {
+    background-position-x: -1360px;
+}
+
+.text-slide {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    color: #333;
+    opacity: 0;
+    transition: 1s ease-out;
+    text-align: center;
+}
+
+.text-slide.text1 {
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.text-slide.text2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.text-slide.text3 {
+    right: 0%;
+    transform: translate(50%, -50%);
+}
+
+.text-slide h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 6em;
+    line-height: 0.8em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+.text-slide p {
+    font-size: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+.slider.minSlider .text-slide {}
+
+.slider.minSlider .text-slide.text1 {
+    left: 20%;
+    opacity: 1;
+}
+
+.slider.minSlider .text-slide.text1 h2 {
+    font-size: 4em;
+}
+
+.slider.minSlider .text-slide.text1 p {
+    font-size: 12px;
+}
+
+.slider.minSlider .text-slide.text3 {
+    opacity: 1;
+    right: 20%;
+    left: 0%;
+    transform: translate(50%, -50%);
+
+}
+
+.slider.minSlider .text-slide.text3 h2 {
+    font-size: 4em;
+}
+
+.slider.minSlider .text-slide.text3 p {
+    font-size: 12px;
+}
+
+.slider input[type="radio"].radio1:checked~.text-slide.text1 {
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.slider input[type="radio"].radio2:checked~.text-slide.text2 {
+    opacity: 1;
+
+
+}
+
+.slider input[type="radio"].radio3:checked~.text-slide.text3 {
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

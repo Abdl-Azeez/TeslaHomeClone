@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;" />
+    <title>Tesla Clone for iRyde</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            $(document).ready(function () {
+                $('#slider').addClass('minSlider');
+            });
+
+
+        };
+
+        setTimeout(function () {
+            $('#slider').removeClass('minSlider');
+        }, 3500);
+    </script>
+</head>
+
+
+<body>
+    <section class="slider minSlider" id="slider">
+        <input type="radio" name="slide" class="radio1">
+        <input type="radio" name="slide" class="radio2" checked="checked">
+        <input type="radio" name="slide" class="radio3">
+
+        <div class="text-slide text1">
+            <h2>Left Side</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa magnam commodi.</p>
+        </div>
+        <div class="text-slide text2">
+            <h2>Center</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa magnam commodi.</p>
+        </div>
+        <div class="text-slide text3">
+            <h2>Right Side</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa magnam commodi.</p>
+        </div>
+        <div class="slide"></div>
+    </section>
+</body>
+
+
+</html>
